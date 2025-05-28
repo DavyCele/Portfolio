@@ -607,12 +607,12 @@ img {
   }
   
   .timeline-date {
-    left: 30% !important;
+    left: 36% !important;
     margin-bottom: var(--spacing-sm);
     position: relative;
     right: 250px !important;
     top: 16px;
-    width: 250px;
+    width: 190px;
   }
   
   .timeline-dot {
