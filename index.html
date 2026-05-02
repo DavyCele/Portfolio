@@ -1,21 +1,370 @@
 <!doctype html>
-<html lang="en">
+<html lang="it">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta name="description" content="Web site created using create-react-app" />
-    
+    <meta name="theme-color" content="#111319" />
+    <meta
+      name="description"
+      content="Portfolio professionale di Davide Celentano: informatica, digital marketing, amministrazione e contabilita."
+    />
     <link rel="icon" href="favicon.ico" />
     <link rel="apple-touch-icon" href="logo192.png" />
     <link rel="manifest" href="manifest.json" />
-    <link href="static/css/main.5f1428d3.css" rel="stylesheet" />
-    
+    <link rel="stylesheet" href="static/css/portfolio-redesign.css" />
     <title>Portfolio Davide G. Celentano</title>
-    <script defer src="static/js/main.c8ae62c3.js"></script>
+    <noscript>
+      <style>
+        .reveal {
+          opacity: 1;
+          transform: none;
+        }
+      </style>
+    </noscript>
   </head>
   <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
+    <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+    <a class="skip-link" href="#profilo">Vai al contenuto</a>
+
+    <header class="site-header" data-header>
+      <a class="brand" href="#top" aria-label="Torna all'inizio">
+        <span class="brand-mark">CGD</span>
+        <span class="brand-text">Davide Celentano</span>
+      </a>
+      <button class="menu-toggle" type="button" aria-label="Apri menu" aria-expanded="false" aria-controls="primary-nav" data-menu-toggle>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" id="primary-nav" aria-label="Navigazione principale" data-nav>
+        <a href="#profilo">Profilo</a>
+        <a href="#competenze">Competenze</a>
+        <a href="#esperienze">Esperienze</a>
+        <a href="#formazione">Formazione</a>
+        <a href="#progetti">Progetti</a>
+        <a href="#contatti">Contatti</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero section-shell" aria-labelledby="hero-title">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Informatica, processi e comunicazione digitale</p>
+          <h1 id="hero-title"><span>Celentano G.</span> <span>Davide</span></h1>
+          <p class="hero-role">Ingegnere Informatico | Digital Operations | Amministrazione contabile</p>
+          <p class="hero-lead">
+            Trasformo tecnologia, contenuti e organizzazione operativa in sistemi chiari: sviluppo web,
+            gestione documentale, campagne digitali e supporto amministrativo con attenzione ai dettagli.
+          </p>
+          <div class="hero-actions" aria-label="Azioni principali">
+            <a class="btn btn-primary" href="mailto:davycele@gmail.com" aria-label="Scrivi una email a Davide">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm0 3 8 5 8-5" />
+              </svg>
+              Contattami
+            </a>
+            <a class="btn btn-ghost" href="#esperienze" aria-label="Vai alla sezione esperienze">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 5v14m0 0 6-6m-6 6-6-6" />
+              </svg>
+              Esperienze
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-panel reveal" aria-label="Sintesi professionale">
+          <div class="portrait-wrap">
+            <img src="static/assets/profile-photo.jpg" alt="Ritratto professionale di Davide Celentano" />
+          </div>
+          <div class="signal-list">
+            <div>
+              <span>2025 - 2026</span>
+              <strong>I.B.A. Giuseppe Varlese S.r.l.</strong>
+            </div>
+            <div>
+              <span>Java + React</span>
+              <strong>Sviluppo full-stack in aggiornamento continuo</strong>
+            </div>
+            <div>
+              <span>Office, CAD, WordPress</span>
+              <strong>Strumenti tecnici e amministrativi</strong>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <section id="profilo" class="section-shell profile-section reveal" aria-labelledby="profilo-title">
+        <div class="section-heading">
+          <p class="eyebrow">Profilo</p>
+          <h2 id="profilo-title">Un profilo ibrido, tecnico e operativo</h2>
+        </div>
+        <div class="profile-grid">
+          <p>
+            Ho una formazione in Ingegneria Informatica e un percorso professionale che unisce sviluppo web,
+            social media marketing e back office amministrativo. Questo mi permette di leggere un progetto sia
+            dal lato tecnico sia dal lato organizzativo.
+          </p>
+          <p>
+            Negli ultimi anni ho lavorato su contenuti digitali, procedure amministrative, gestione documentale
+            e strumenti software. Porto metodo, autonomia e capacita di rendere piu ordinati i flussi di lavoro.
+          </p>
+          <blockquote>
+            La tecnologia crea valore quando rende piu chiari i processi e piu semplice il lavoro quotidiano.
+          </blockquote>
+        </div>
+      </section>
+
+      <section id="competenze" class="section-shell reveal" aria-labelledby="competenze-title">
+        <div class="section-heading">
+          <p class="eyebrow">Competenze</p>
+          <h2 id="competenze-title">Aree di lavoro</h2>
+        </div>
+        <div class="skills-grid">
+          <article class="skill-card">
+            <span class="card-index">01</span>
+            <h3>Sviluppo Web</h3>
+            <ul>
+              <li>HTML5</li>
+              <li>CSS3</li>
+              <li>JavaScript</li>
+              <li>PHP</li>
+              <li>Responsive Design</li>
+              <li>UI/UX</li>
+              <li>Vite</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <span class="card-index">02</span>
+            <h3>Programmazione</h3>
+            <ul>
+              <li>Java (Base e Avanzato)</li>
+              <li>Python</li>
+              <li>C++</li>
+              <li>SQL</li>
+              <li>Spring Boot</li>
+              <li>Spring MVC</li>
+              <li>React</li>
+              <li>Docker</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <span class="card-index">03</span>
+            <h3>Digital Marketing</h3>
+            <ul>
+              <li>Social Media Strategy</li>
+              <li>Content Creation</li>
+              <li>Campaign Management</li>
+              <li>Analytics, branding e comunicazione digitale</li>
+              <li>SEO Base</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <span class="card-index">04</span>
+            <h3>Software & Tools</h3>
+            <ul>
+              <li>WordPress</li>
+              <li>Microsoft Office Suite</li>
+              <li>Adobe Photoshop</li>
+              <li>Adobe Illustrator</li>
+              <li>CAD</li>
+              <li>Assistenza hardware e software</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <span class="card-index">05</span>
+            <h3>Lingue</h3>
+            <ul>
+              <li>Italiano (Madrelingua)</li>
+              <li>Inglese (Intermedio, B2)</li>
+            </ul>
+          </article>
+          <article class="skill-card">
+            <span class="card-index">06</span>
+            <h3>Soft Skills</h3>
+            <ul>
+              <li>Problem Solving</li>
+              <li>Comunicazione efficace</li>
+              <li>Lavoro di squadra</li>
+              <li>Adattabilita</li>
+              <li>Gestione del tempo</li>
+              <li>Pensiero analitico</li>
+              <li>Creativita</li>
+            </ul>
+          </article>
+          <article class="skill-card featured">
+            <span class="card-index">07</span>
+            <h3>Amministrazione e contabilita</h3>
+            <ul>
+              <li>Gestione ordinata dei flussi documentali</li>
+              <li>Registrazione fatture e documenti amministrativi</li>
+              <li>Operazioni di cassa, pagamenti e controllo archivi</li>
+              <li>Organizzazione documentale e gestione merce</li>
+            </ul>
+          </article>
+          <article class="skill-card ai-card">
+            <span class="card-index">08</span>
+            <h3>Intelligenza artificiale</h3>
+            <ul>
+              <li>Utilizzo avanzato di strumenti di Intelligenza Artificiale per produttivita, analisi dati, creazione contenuti e automazione processi</li>
+              <li>Esperienza nell'impiego di AI generativa per testi, marketing, customer support e problem solving tecnico</li>
+              <li>Ottima capacita di utilizzo di piattaforme AI come OpenAI ChatGPT, Google Gemini e Anthropic Claude per ottimizzazione del lavoro</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section id="esperienze" class="section-shell reveal" aria-labelledby="esperienze-title">
+        <div class="section-heading">
+          <p class="eyebrow">Esperienze</p>
+          <h2 id="esperienze-title">Percorso professionale</h2>
+        </div>
+        <div class="timeline">
+          <article class="timeline-item current">
+            <time>2025 - 2026</time>
+            <div class="timeline-body">
+              <p class="role">Impiegato Amministrativo contabile</p>
+              <h3>I.B.A. Giuseppe Varlese S.r.l.</h3>
+              <ul>
+                <li>Supporto alle attivita amministrative e contabili quotidiane, garantendo una gestione ordinata dei flussi documentali.</li>
+                <li>Gestione e registrazione di fatture e documenti amministrativi.</li>
+                <li>Responsabile delle operazioni di cassa e dei pagamenti.</li>
+                <li>Organizzazione e controllo del sistema di archiviazione documentale e della merce.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <time>Aprile 2023 - Luglio 2023</time>
+            <div class="timeline-body">
+              <p class="role">Impiegato Amministrativo</p>
+              <h3>LastItalia</h3>
+              <ul>
+                <li>Supporto alle operazioni amministrative quotidiane e gestione dei flussi informativi.</li>
+                <li>Gestione CAD e assistenza tecnica per progetti interni.</li>
+                <li>Collaborazione con il team per ottimizzare procedure operative e tempi di elaborazione.</li>
+              </ul>
+            </div>
+          </article>
+
+          <article class="timeline-item">
+            <time>2020 - 2023</time>
+            <div class="timeline-body">
+              <p class="role">Social Media Marketing</p>
+              <h3>Piccole aziende e privati</h3>
+              <ul>
+                <li>Ideazione e gestione di campagne pubblicitarie su Facebook, Instagram e altre piattaforme.</li>
+                <li>Creazione di contenuti grafici e testuali per post, stories e sponsorizzazioni mirate.</li>
+                <li>Sviluppo di strategie di branding e comunicazione digitale per realta locali.</li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="formazione" class="section-shell reveal" aria-labelledby="formazione-title">
+        <div class="section-heading">
+          <p class="eyebrow">Formazione</p>
+          <h2 id="formazione-title">Studio e aggiornamento</h2>
+        </div>
+        <div class="education-grid">
+          <article>
+            <time>2022 - 2024</time>
+            <h3>Universita Mercatorum</h3>
+            <p>Ingegneria Informatica, sviluppo applicazioni software e progettazione di sistemi informatici.</p>
+          </article>
+          <article>
+            <time>Febbraio 2024 - Marzo 2024</time>
+            <h3>Gi Group - Corso Forma.temp</h3>
+            <p>Programma Java React con focus su Java avanzato, React, Spring Boot e sviluppo full-stack.</p>
+          </article>
+          <article>
+            <time>2007 - 2013</time>
+            <h3>ISISS O. Conti Aversa (CE)</h3>
+            <p>Diploma Tecnico delle Industrie Elettriche ed Elettroniche.</p>
+          </article>
+          <article>
+            <time>2024</time>
+            <h3>Certificazione Java e React</h3>
+            <p>Cboxiqc - ID FE073063-977F-4FFF-8334-784F4604C006.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="progetti" class="section-shell reveal" aria-labelledby="progetti-title">
+        <div class="section-heading">
+          <p class="eyebrow">Progetti</p>
+          <h2 id="progetti-title">Laboratorio digitale</h2>
+        </div>
+        <div class="projects-row">
+          <article class="project-card">
+            <h3>Sistema di gestione social media</h3>
+            <p>Piattaforma web per campagne social, dashboard analitica e automazione dei contenuti.</p>
+            <div class="tag-list">
+              <span>React</span>
+              <span>Node.js</span>
+              <span>MongoDB</span>
+            </div>
+          </article>
+          <article class="project-card">
+            <h3>Dashboard amministrativa</h3>
+            <p>Interfaccia per gestione progetti interni, reportistica e visualizzazione dati operativi.</p>
+            <div class="tag-list">
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>MySQL</span>
+            </div>
+          </article>
+          <article class="project-card">
+            <h3>E-commerce ottimizzato</h3>
+            <p>Sistema e-commerce personalizzato con integrazione contenuti e strategia digitale.</p>
+            <div class="tag-list">
+              <span>WordPress</span>
+              <span>PHP</span>
+              <span>JavaScript</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="contatti" class="section-shell contact-section reveal" aria-labelledby="contatti-title">
+        <div class="section-heading">
+          <p class="eyebrow">Contatti</p>
+          <h2 id="contatti-title">Costruiamo qualcosa di concreto</h2>
+        </div>
+        <div class="contact-layout">
+          <div class="contact-copy">
+            <p>
+              Sono disponibile per opportunita in ambito informatico, amministrativo e digital operations.
+              Posso supportare team che cercano precisione nei processi e versatilita sui progetti digitali.
+            </p>
+            <a class="btn btn-primary" href="mailto:davycele@gmail.com">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 5h16a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V7a2 2 0 0 1 2-2Zm0 3 8 5 8-5" />
+              </svg>
+              Scrivimi
+            </a>
+          </div>
+          <address class="contact-list">
+            <a href="mailto:davycele@gmail.com">davycele@gmail.com</a>
+            <a href="tel:+393459445174">+39 345 94 45 174</a>
+            <a href="https://www.linkedin.com/in/davide-celentano-9424a5269/" target="_blank" rel="noopener noreferrer">
+              LinkedIn / davide-celentano-9424a5269
+            </a>
+            <span>Lusciano (CE)</span>
+            <span>Patenti A, B, C, CQC merci</span>
+          </address>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Celentano G. Davide. Tutti i diritti riservati.</p>
+      <a href="#top" aria-label="Torna su">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 19V5m0 0-6 6m6-6 6 6" />
+        </svg>
+      </a>
+    </footer>
+
+    <script src="static/js/portfolio-redesign.js" defer></script>
   </body>
 </html>
