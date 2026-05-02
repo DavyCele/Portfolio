@@ -36,9 +36,11 @@ body {
     linear-gradient(180deg, #101115 0%, #151313 48%, #101115 100%);
   color: var(--paper);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  isolation: isolate;
   line-height: 1.6;
   min-height: 100svh;
   overflow-x: clip;
+  position: relative;
   width: 100%;
 }
 
@@ -54,20 +56,24 @@ body::before {
   content: "";
   inset: 0;
   mask-image: linear-gradient(to bottom, black, transparent 86%);
+  opacity: 0.82;
   pointer-events: none;
   position: fixed;
-  z-index: -3;
+  z-index: 0;
 }
 
 body::after {
+  animation: beamFloat 18s ease-in-out infinite alternate;
   background:
-    linear-gradient(135deg, transparent 0 24%, rgba(242, 190, 92, 0.12) 24% 25%, transparent 25% 100%),
-    linear-gradient(42deg, transparent 0 42%, rgba(101, 199, 208, 0.1) 42% 43%, transparent 43% 100%);
+    linear-gradient(135deg, transparent 0 24%, rgba(242, 190, 92, 0.18) 24% 25%, transparent 25% 100%),
+    linear-gradient(42deg, transparent 0 42%, rgba(101, 199, 208, 0.16) 42% 43%, transparent 43% 100%);
   content: "";
   inset: 0;
+  opacity: 0.78;
   pointer-events: none;
   position: fixed;
-  z-index: -2;
+  transform: translate3d(0, 0, 0);
+  z-index: 0;
 }
 
 a {
@@ -97,10 +103,12 @@ svg {
 #ambient-canvas {
   height: 100%;
   inset: 0;
+  mix-blend-mode: screen;
+  opacity: 0.92;
   pointer-events: none;
   position: fixed;
   width: 100%;
-  z-index: -1;
+  z-index: 0;
 }
 
 .skip-link {
@@ -222,6 +230,7 @@ svg {
 
 main {
   position: relative;
+  z-index: 1;
 }
 
 section[id],
@@ -704,6 +713,8 @@ strong {
   margin: 0 auto;
   max-width: var(--max-width);
   padding: 24px;
+  position: relative;
+  z-index: 1;
 }
 
 .site-footer a {
@@ -744,6 +755,18 @@ strong {
 
   to {
     background-position: 78px 0, 0 78px;
+  }
+}
+
+@keyframes beamFloat {
+  from {
+    background-position: 0 0, 0 0;
+    transform: translate3d(-1.5%, -1%, 0) scale(1);
+  }
+
+  to {
+    background-position: 120px -80px, -90px 110px;
+    transform: translate3d(1.5%, 1%, 0) scale(1.03);
   }
 }
 
