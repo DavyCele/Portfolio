@@ -153,26 +153,18 @@ svg {
 .brand {
   align-items: center;
   display: inline-flex;
-  gap: 12px;
-  min-width: 0;
+  flex: 0 0 auto;
+  min-width: 92px;
 }
 
-.brand-mark {
-  align-items: center;
-  aspect-ratio: 1;
-  background: linear-gradient(135deg, var(--mint), var(--amber) 54%, var(--coral));
-  color: var(--ink);
-  display: inline-flex;
-  font-size: 0.78rem;
-  font-weight: 900;
-  justify-content: center;
-  width: 42px;
-}
-
-.brand-text {
-  color: var(--paper);
-  font-weight: 800;
-  white-space: nowrap;
+.brand-logo {
+  display: block;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.35));
+  height: 44px;
+  mix-blend-mode: screen;
+  object-fit: contain;
+  opacity: 0.96;
+  width: auto;
 }
 
 .site-nav {
@@ -838,10 +830,8 @@ strong {
     padding: 0 16px;
   }
 
-  .brand-text {
-    max-width: 172px;
-    overflow: hidden;
-    text-overflow: ellipsis;
+  .brand-logo {
+    height: 40px;
   }
 
   .menu-toggle {
@@ -1078,14 +1068,8 @@ strong {
     font-size: 1.85rem;
   }
 
-  .brand-text {
-    font-size: 0;
-    max-width: none;
-  }
-
-  .brand-text::after {
-    content: "Davide C.";
-    font-size: 1rem;
+  .brand-logo {
+    height: 36px;
   }
 
   .skill-card,
@@ -1097,8 +1081,8 @@ strong {
 }
 
 @media (max-width: 360px) {
-  .brand-text {
-    display: none;
+  .brand-logo {
+    height: 32px;
   }
 
   .site-header {
