@@ -295,6 +295,13 @@ h3 {
   font-size: 1.35rem;
 }
 
+.stack-title span {
+  display: block;
+  overflow-wrap: normal;
+  white-space: nowrap;
+  word-break: keep-all;
+}
+
 .hero-role {
   color: var(--amber);
   font-size: 1.18rem;
