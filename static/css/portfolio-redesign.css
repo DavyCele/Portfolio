@@ -134,7 +134,7 @@ svg {
   display: flex;
   gap: 22px;
   height: var(--header-height);
-  justify-content: space-between;
+  justify-content: flex-end;
   left: 0;
   overflow: hidden;
   padding: 0 max(18px, calc((100vw - var(--max-width)) / 2));
@@ -149,26 +149,6 @@ svg {
   background: rgba(17, 19, 25, 0.92);
   border-color: rgba(255, 255, 255, 0.15);
   height: 66px;
-}
-
-.brand {
-  align-items: center;
-  display: inline-flex;
-  flex: 0 0 auto;
-  min-width: 76px;
-}
-
-.brand-logo,
-.brand img {
-  display: block;
-  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.35));
-  height: 38px;
-  max-height: calc(var(--header-height) - 18px);
-  max-width: 134px;
-  mix-blend-mode: screen;
-  object-fit: contain;
-  opacity: 0.96;
-  width: auto;
 }
 
 .site-nav {
@@ -834,11 +814,6 @@ strong {
     padding: 0 16px;
   }
 
-  .brand-logo {
-    height: 34px;
-    max-width: 118px;
-  }
-
   .menu-toggle {
     display: inline-flex;
     flex: 0 0 auto;
@@ -1073,11 +1048,6 @@ strong {
     font-size: 1.85rem;
   }
 
-  .brand-logo {
-    height: 30px;
-    max-width: 104px;
-  }
-
   .skill-card,
   .project-card,
   .education-grid article,
@@ -1087,11 +1057,6 @@ strong {
 }
 
 @media (max-width: 360px) {
-  .brand-logo {
-    height: 28px;
-    max-width: 96px;
-  }
-
   .site-header {
     padding: 0 12px;
   }
